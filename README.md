@@ -18,33 +18,30 @@ In live market execution, manual position sizing often leads to human error and 
 ---
 
 ## File Structure & Overview
-
-`text
 AlgoRisk/
-├── CMakeLists.txt # CMake build configuration
-├── include/ # Header files
-│ ├── Exceptions.hpp # Custom exception classes
-│ ├── Asset.hpp # Base abstract class for financial assets
-│ ├── ForexAsset.hpp # Forex asset implementation
-│ ├── CryptoAsset.hpp # Crypto asset implementation
-│ ├── GoldAsset.hpp # Gold asset implementation
-│ ├── Trade.hpp # Trade structure and state properties
-│ ├── RiskValidator.hpp # Static validation engine for risk limits
-│ └── TradeManager.hpp # Execution coordinator & spdlog wrapper
-├── src/ # Core implementation files
-│ ├── main.cpp # Main program demonstration
-│ ├── ForexAsset.cpp
-│ ├── CryptoAsset.cpp
-│ ├── GoldAsset.cpp
-│ ├── Trade.cpp
-│ ├── RiskValidator.cpp
-│ └── TradeManager.cpp
-└── tests/ # GoogleTest suite
-├── Test_Forex_Asset.cpp
-├── Test_Crypto_Asset.cpp
-├── Test_Gold_Asset.cpp
-└── Test_RiskValidator.cpp
-
+├── CMakeLists.txt              # CMake build configuration
+├── include/                    # Header files
+│   ├── Exceptions.hpp          # Custom exception classes
+│   ├── Asset.hpp               # Base abstract class for financial assets
+│   ├── ForexAsset.hpp          # Forex asset implementation
+│   ├── CryptoAsset.hpp         # Crypto asset implementation
+│   ├── GoldAsset.hpp           # Gold asset implementation
+│   ├── Trade.hpp               # Trade structure and state properties
+│   ├── RiskValidator.hpp       # Static validation engine for risk limits
+│   └── TradeManager.hpp        # Execution coordinator & spdlog wrapper
+├── src/                        # Core implementation files
+│   ├── main.cpp                # Main program demonstration
+│   ├── ForexAsset.cpp
+│   ├── CryptoAsset.cpp
+│   ├── GoldAsset.cpp
+│   ├── Trade.cpp
+│   ├── RiskValidator.cpp
+│   └── TradeManager.cpp
+└── tests/                      # GoogleTest suite
+    ├── Test_Forex_Asset.cpp
+    ├── Test_Crypto_Asset.cpp
+    ├── Test_Gold_Asset.cpp
+    └── Test_RiskValidator.cpp
 ### Key Modules:
 * **`Exceptions.hpp`**: Defines domain exceptions (`RiskLimitException`, `InvalidStopLossException`) derived from standard C++ runtime/argument errors.
 * **`RiskValidator.hpp`**: Ensures strict validation (e.g., verifying Buy trades have Stop Loss below Entry, Sell trades have Stop Loss above Entry, and risk percentages remain within configured limits).
