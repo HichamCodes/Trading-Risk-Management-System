@@ -1,7 +1,5 @@
 # AlgoRisk - Automated Trade Risk & Lot Size Calculator
 
-#### Video https://www.loom.com/share/51be90fe35db4a59ad41c7d91953cd30
-
 ## Description
 AlgoRisk is a C++20 trading risk management system designed to validate trade execution parameters and automatically calculate precise lot sizes for financial assets, including Forex, Cryptocurrencies, and Gold.
 
