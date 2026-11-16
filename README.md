@@ -60,30 +60,22 @@ AlgoRisk/
 3. **Decoupled Unit Testing:** Decoupled business logic from `main.cpp` into isolated components, allowing 100% automated test coverage with GoogleTest.
 
 ---
-
 ## Prerequisites & Building
 
 ### Requirements
-* C++20 compatible compiler (GCC/G++)
+* C++20 compatible compiler (GCC / Clang / MSVC)
 * CMake v3.15+
-* Make
-* `spdlog` development headers (`libspdlog-dev`)
+* *(Dependencies spdlog and GoogleTest are fetched automatically by CMake)*
 
-### Installation & Build Steps
-
-1. Install dependencies (Linux/CS50 Codespace):
-bash
-sudo apt update && sudo apt install -y build-essential cmake libspdlog-dev
-
-2. Compile the project:
-bash
-mkdir -p build && cd build
-cmake ..
-make
-
-3. Run unit tests:
-bash
-./unit_tests
+### Build & Run Steps
+1. Clone the repository:
+git clone https://github.com/HichamCodes/Trading-Risk-Management-System.git && cd Trading-Risk-Management-System
+2. Configure and compile the project:
+cmake -B build && cmake --build build
+3. Run the unit tests:
+./build/unit_tests
+4. Run the demo application:
+./build/AlgoRisk
 
 4. Run the demo application:
 bash
