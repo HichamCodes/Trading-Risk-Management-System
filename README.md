@@ -19,6 +19,7 @@ In live market execution, manual position sizing often leads to human error and 
 
 ## File Structure & Overview
 
+<pre>
 AlgoRisk/
 ├── CMakeLists.txt # CMake build configuration
 ├── include/ # Header files
@@ -43,6 +44,7 @@ AlgoRisk/
 ├── Test_Crypto_Asset.cpp
 ├── Test_Gold_Asset.cpp
 └── Test_RiskValidator.cpp
+</pre>
 
 ### Key Modules:
 * **`Exceptions.hpp`**: Defines domain exceptions (`RiskLimitException`, `InvalidStopLossException`) derived from standard C++ runtime/argument errors.
