@@ -5,8 +5,14 @@ project(AlgoRisk)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+include(FetchContent)
+FetchContent_Declare(
+spdlog
+GIT_REPOSITORY https://github.com/gabime/spdlog.git
+GIT_TAG v1.15.0
+)
+FetchContent_MakeAvailable(spdlog)
 
-find_package(spdlog REQUIRED)
 
 # Include the FetchContent module
 include(FetchContent)
