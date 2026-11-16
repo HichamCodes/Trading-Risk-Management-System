@@ -74,8 +74,7 @@ git clone https://github.com/HichamCodes/Trading-Risk-Management-System.git && c
 cmake -B build && cmake --build build
 3. Run the unit tests:
 ./build/unit_tests
-4. Run the demo application:
-./build/AlgoRisk
+
 
 4. Run the demo application:
 bash
