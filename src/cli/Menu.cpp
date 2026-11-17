@@ -189,3 +189,37 @@ Riskvalidator::validate(trade);
 auto forexAsset = std::make_unique<ForexAsset>();
 
 double lotSize = forexAsset->calculateLotSize(trade);
+
+std::cout << std::fixed << std::setprecision(2);
+
+std::cout << "\n========== TRADE RESULT ==========\n";
+
+std::cout << "Account Balance: "
+<< trade.getAccountBalance() << '\n';
+
+std::cout << "Risk: "
+<< trade.getRiskPercentage() << "%\n";
+
+std::cout << "Entry Price: "
+<< trade.getEntryPrice() << '\n';
+
+std::cout << "Stop Loss: "
+<< trade.getStopLoss() << '\n';
+
+std::cout << "Strategy: "
+<< trade.getStrategyName() << '\n';
+
+std::cout << "Trade Side: "
+<< (trade.getTradeSide() == TradeSide::BUY
+? "BUY" : "SELL") << '\n';
+
+std::cout << "Lot Size: "
+<< lotSize << '\n';
+
+std::cout << "==================================\n";
+}
+catch (const std::exception& e)
+{
+std::cout << "\nTrade Error: " << e.what() << '\n';
+}
+}
