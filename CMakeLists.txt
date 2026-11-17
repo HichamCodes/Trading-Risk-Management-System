@@ -6,7 +6,14 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
-find_package(spdlog REQUIRED)
+include(FetchContent)
+
+FetchContent_Declare(
+spdlog
+GIT_REPOSITORY https://github.com/gabime/spdlog.git
+GIT_TAG v1.14.1
+)
+FetchContent_MakeAvailable(spdlog)
 
 # Include the FetchContent module
 include(FetchContent)
