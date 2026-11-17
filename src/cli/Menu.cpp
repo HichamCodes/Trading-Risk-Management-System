@@ -190,7 +190,7 @@ auto forexAsset = std::make_unique<ForexAsset>();
 
 double lotSize = forexAsset->calculateLotSize(trade);
 
-std::cout << std::fixed << std::setprecision(2);
+std::cout << std::fixed << std::setprecision();
 
 std::cout << "\n========== TRADE RESULT ==========\n";
 
