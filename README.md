@@ -1,5 +1,7 @@
 # AlgoRisk - Automated Trade Risk & Lot Size Calculator
 
+#### Video https://www.loom.com/share/51be90fe35db4a59ad41c7d91953cd30
+
 ## Description
 AlgoRisk is a C++20 trading risk management system designed to validate trade execution parameters and automatically calculate precise lot sizes for financial assets, including Forex, Cryptocurrencies, and Gold.
 
@@ -19,7 +21,7 @@ In live market execution, manual position sizing often leads to human error and 
 
 ## File Structure & Overview
 
-<pre>
+`text
 AlgoRisk/
 ├── CMakeLists.txt # CMake build configuration
 ├── include/ # Header files
@@ -44,7 +46,6 @@ AlgoRisk/
 ├── Test_Crypto_Asset.cpp
 ├── Test_Gold_Asset.cpp
 └── Test_RiskValidator.cpp
-</pre>
 
 ### Key Modules:
 * **`Exceptions.hpp`**: Defines domain exceptions (`RiskLimitException`, `InvalidStopLossException`) derived from standard C++ runtime/argument errors.
@@ -60,20 +61,32 @@ AlgoRisk/
 3. **Decoupled Unit Testing:** Decoupled business logic from `main.cpp` into isolated components, allowing 100% automated test coverage with GoogleTest.
 
 ---
+
 ## Prerequisites & Building
 
 ### Requirements
-* C++20 compatible compiler (GCC / Clang / MSVC)
+* C++20 compatible compiler (GCC/G++)
 * CMake v3.15+
-* *(Dependencies spdlog and GoogleTest are fetched automatically by CMake)*
+* Make
+* `spdlog` development headers (`libspdlog-dev`)
 
-### Build & Run Steps
-1. Clone the repository:
-git clone https://github.com/HichamCodes/Trading-Risk-Management-System.git && cd Trading-Risk-Management-System
-2. Configure and compile the project:
-cmake -B build && cmake --build build
-3. Run the unit tests:
-./build/unit_tests
+### Installation & Build Steps
 
-4. Run the demo application:./build/AlgoRisk
+1. Install dependencies (Linux/CS50 Codespace):
+bash
+sudo apt update && sudo apt install -y build-essential cmake libspdlog-dev
+
+2. Compile the project:
+bash
+mkdir -p build && cd build
+cmake ..
+make
+
+3. Run unit tests:
+bash
+./unit_tests
+
+4. Run the demo application:
+bash
+./AlgoRisk
 `
